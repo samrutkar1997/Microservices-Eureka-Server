@@ -1,0 +1,25 @@
+package com.codedecode.microservices.CitizenService.Entity;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.web.WebProperties.Resources.Chain.Strategy;
+
+import jakarta.annotation.Generated;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.Data;
+
+@Entity
+@Data 
+@AllArgsConstructor
+@NoArgsConstructor
+public class Citizen {
+	@Id
+	@Generated
+	@Value(strategy=GenerationType.AUTO)
+	private int id;
+	
+	private String name;
+	
+	private int vaccinationCenterId;
+}

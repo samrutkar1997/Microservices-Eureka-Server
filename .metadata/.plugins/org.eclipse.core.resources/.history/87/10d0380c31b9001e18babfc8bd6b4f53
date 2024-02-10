@@ -1,0 +1,5 @@
+package com.codedecode.microservices.CitizenService.Entity;
+
+public class Citizen {
+
+}

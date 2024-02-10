@@ -1,0 +1,10 @@
+package com.codedecode.microservices.CitizenService.Entity;
+
+import lombok.AllArgsConstructor;
+
+
+@AllArgsConstructor
+@NoArgsConstrustor
+public class Citizen {
+
+}

@@ -1,0 +1,26 @@
+package com.codedecode.microservices.VaccinationCenter.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.codedecode.microservices.VaccinationCenter.Entity.VaccinationCenter;
+import com.codedecode.microservices.VaccinationCenter.Repo.CenterRepo;
+
+@RestController
+@RequestMapping("/vaccinationcenter")
+public class VaccinationCenterController {
+
+	@Autowired
+	private CenterRepo centerRepo;
+	
+	@PostMapping("/add")
+	public ResponseEntity<VaccinationCenter> addCenter(@RequestBody VaccinationCenter center){
+		VaccinationCenter centeradded = centerRepo.save(center);
+		return new ResponseEntity<>(centeradded,HttpStatus.OK);
+	}
+}

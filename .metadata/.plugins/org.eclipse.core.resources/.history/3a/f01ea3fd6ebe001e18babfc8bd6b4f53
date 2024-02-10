@@ -1,0 +1,8 @@
+package com.codedecode.microservices.VaccinationCenter.Model;
+
+import com.codedecode.microservices.VaccinationCenter.Entity.VaccinationCenter;
+
+public class Responsedto {
+private VaccinationCenter center;
+private List<Citizen> citizens;
+}

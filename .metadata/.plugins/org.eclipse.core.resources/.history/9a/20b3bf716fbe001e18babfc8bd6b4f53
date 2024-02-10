@@ -1,0 +1,5 @@
+package com.codedecode.microservices.VaccinationCenter.Repo;
+
+public interface CenterRepo {
+
+}

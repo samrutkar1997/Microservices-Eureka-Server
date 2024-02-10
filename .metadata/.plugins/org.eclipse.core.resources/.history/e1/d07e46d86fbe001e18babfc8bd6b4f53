@@ -1,0 +1,13 @@
+package com.codedecode.microservices.VaccinationCenter.Controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/vaccinationcenter")
+public class VaccinationCenterController {
+
+	@Autowired
+	private CenterRepo Repo;
+	
+}
